@@ -17,3 +17,9 @@ b = torch.from_numpy(a)
 np.add(a, 1, out=a)
 print(a)
 print(b)
+# let us run this cell only if CUDA is available
+if torch.cuda.is_available():
+    x = x.cuda()
+    y = y.cuda()
+    x + y
+    print ("cuda !")
